@@ -43,4 +43,4 @@ $(CELESTE_OBJ): celeste.c celeste.h
 
 clean:
 	$(RM) ccleste ccleste-fixedp celeste.o celeste-fixedp.o
-	make -f Makefile.3ds clean
+	make -f Makefile.switch clean

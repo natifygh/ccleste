@@ -2,7 +2,7 @@
 
 ![screenshot](https://raw.githubusercontent.com/lemon-sherbet/ccleste/master/screenshot.png)
 
-This is a C source port of the [original celeste (Celeste classic)](https://www.lexaloffle.com/bbs/?tid=2145) for the PICO-8, designed to be portable. PC and 3DS are the main supported platforms, though other people are [maintaining ports to other platforms](https://github.com/lemon32767/ccleste/network/members).
+This is a C source port of the [original celeste (Celeste classic)](https://www.lexaloffle.com/bbs/?tid=2145) for the PICO-8, designed to be portable. PC and NX (Switch) are the main supported platforms (on this fork and branch), though other people are [maintaining ports to other platforms](https://github.com/lemon32767/ccleste/network/members).
 
 Go to [the releases tab](https://github.com/lemon-sherbet/ccleste/releases) for the latest pre-built binaries.
 
@@ -17,21 +17,19 @@ make
 ```
 By default, SDL2 will be used. Read the Makefile for more information.
 
-3DS is also a supported platform. Compile to 3DS with:
+Nintendo Switch is also a supported platform. Compile to NX (Switch) with:
 ```
-make -f Makefile.3ds    # this will generate ccleste.3dsx
+make -f Makefile.switch    # this will generate ccleste.nro
 ```
 You will need devkitPro with these dkp packages installed:
 ```
-3ds-sdl
-3ds-sdl_mixer
-libctru
-devkitARM
+switch-sdl2
+switch-sdl2_mixer
 ```
 
 # Controls
 
-|PC                |3DS                |Action              |
+|PC                |Switch                |Action              |
 |:----------------:|:-----------------:|-------------------:|
 |LEFT              |LEFT               | Move left          |
 |RIGHT             |RIGHT              | Move right         |
