@@ -1,0 +1,32 @@
+name: NX Build
+
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.issue.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  BuildNX:
+    runs-on: ubuntu-latest
+    container:
+      image: devkitpro/devkitarm:latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v3
+      - name: Install build requirements
+        run: |
+          apt update
+          apt install ninja-build 
+          apt install switch-sdl2
+          apt install switch-sdl2_mixer
+      - name: Build the homebrew application
+        run: make -f Makefile.switch   
