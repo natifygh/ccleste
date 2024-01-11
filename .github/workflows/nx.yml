@@ -3,9 +3,9 @@ name: NX Build
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ main ]
+    branches: [ switch ]
   pull_request:
-    branches: [ main ]
+    branches: [ switch ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
         run: |
           apt update
           apt install ninja-build 
-          apt install switch-sdl2
-          apt install switch-sdl2_mixer
+          apt install libsdl2-dev
+          apt install libsdl2-mixer-dev
       - name: Build the homebrew application
         run: make -f Makefile.switch   
