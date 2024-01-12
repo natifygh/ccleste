@@ -42,6 +42,7 @@ BUILD		:=	build
 SOURCES		:=	.
 DATA		:=	
 INCLUDES	:=	lib
+GRAPHICS	:=	
 ROMFS		:=	data
 
 APP_TITLE   := cclesteNX
