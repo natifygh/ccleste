@@ -17,4 +17,4 @@ jobs:
   
     - name: build ccleste
       run: | 
-        make
+        make -f Makefile.switch
