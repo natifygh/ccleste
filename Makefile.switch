@@ -40,9 +40,9 @@ include $(DEVKITPRO)/libnx/switch_rules
 TARGET		:=	$(notdir $(CURDIR))
 BUILD		:=	build
 SOURCES		:=	.
-DATA		:=	data
-INCLUDES	:=	include
-ROMFS		:=	romfs
+DATA		:=	
+INCLUDES	:=	lib
+ROMFS		:=	data
 
 APP_TITLE   := cclesteNX
 APP_AUTHOR  := natifyyy & lemon32767
